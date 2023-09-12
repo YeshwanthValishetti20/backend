@@ -346,6 +346,11 @@ cron.schedule('0 */2 * * *', () => {
   console.log('Task reminder job executed every 2 hours');
 });
 
+app.get('/hello', (req, res) => {
+  console.log('Backend is running!'); // This will print to your backend's console
+  res.send('Hello from the backend!');
+});
+
 app.listen(port, () => {
   console.log(`The express app is running on port ${8000}`);
   
